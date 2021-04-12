@@ -1,0 +1,169 @@
+h1 {
+  font-size: 2.3rem;
+  height: 2.2rem;
+  position: absolute;
+  top: 8%;
+  left: 13%;
+  transform: translate(-10%, -10%);
+  animation: tittle 4s cubic-bezier(0, 3, .36, 3) 1;
+}
+
+
+@keyframes tittle {
+  0% {
+    transform: scale3d(1, 1, 1)
+  }
+
+  30% {
+    transform: scale3d(1.25, 1, 0.75);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1, 1.25);
+  }
+
+  50% {
+    transform: scale3d(1.15, 1, 0.85);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1, 1.05);
+  }
+
+  75% {
+    transform: scale3d(1.05, 1, 0.95);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
+
+#about {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../images/home/about/about_bc.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.st0 {
+  stroke: white;
+  stroke-miterlimit: 10;
+}
+
+
+path {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 1.5px;
+  transition: all 3s;
+}
+
+/* 
+文字动画conatienr
+*/
+#about_container path:not(.max-circle),
+#about_footer path {
+  stroke-dasharray: 0 300;
+  animation: lengthShort 3s linear 1 forwards;
+  animation-name: none;
+}
+
+
+.max-circle {
+  stroke-dasharray: 0 1500;
+  animation: lengthLong 3s linear 1 forwards;
+  animation-name: none;
+}
+
+
+/* 
+logo的svg动画
+*/
+
+.svg-logo:not(.bottom-logo) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.svg-logo {
+  width: 25vw;
+  margin: 4vw 4vw 0 0;
+}
+
+.svg-logo path {
+  stroke-dasharray: 0 500;
+}
+
+
+.logo-anmi-stage {
+  position: relative;
+  align-self: flex-end;
+}
+
+.svg-logo:nth-child(1) path {
+  stroke-width: 0.3px;
+  stroke: red;
+  animation: logoWrite 3s linear 1 forwards;
+  animation-name: none;
+}
+
+.svg-logo:nth-child(2) path {
+  stroke-width: 0.6px;
+  stroke: orange;
+  animation: logoWrite 3s linear 0.5s 1 forwards;
+  animation-name: none;
+}
+
+.svg-logo:nth-child(3) path {
+  stroke-width: 0.9px;
+  stroke: yellow;
+  animation: logoWrite 3s linear 1s 1 forwards;
+  animation-name: none;
+}
+
+.svg-logo:nth-child(4) path {
+  stroke-width: 1.2px;
+  stroke: green;
+  animation: logoWrite 3s linear 1.5s 1 forwards;
+  animation-name: none;
+}
+
+.svg-logo:nth-child(5) path {
+  stroke-width: 1.5px;
+  stroke: rgb(0, 247, 255);
+  animation: logoWrite 3s linear 2s 1 forwards;
+  animation-name: none;
+}
+
+.svg-logo:nth-child(6) path {
+  stroke-width: 1.8px;
+  stroke: white;
+  animation: logoWrite 3s linear 2.5s 1 forwards;
+  animation-name: none;
+}
+
+.g-grade:nth-child(1){
+  transform: rotate(-2.5deg);
+  transform-origin: center;
+  animation: gGrade 3s linear  alternate infinite;
+}
+.g-grade:nth-child(1) path{
+  stroke: rgb(250, 67, 0);
+}
+@keyframes gGrade{
+  form{transform: rotate(-2.5deg)}
+  to{transform: rotate(2.5deg)}
+}

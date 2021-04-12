@@ -1,0 +1,271 @@
+#group{
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+img{
+  width: 100%;
+}
+
+.group{
+  background-image: url(../../images/Group/组别.jpg);
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+/* 星球旋转线 */
+.rota{
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-25%);
+}
+.rota svg{
+  width: 100%;
+}
+.svg_box{
+  width: 20rem;
+  top: 50%;left: 50%;transform: translate(-50%,-50%);
+  position: absolute;
+}
+
+/*  */
+.st1{fill:#FFFFFF;}
+.st4{fill:none;stroke:#FFFFFF;stroke-width:6; stroke-miterlimit:10;}
+
+.rota svg g image{
+  display: none;
+  animation: comeGIm 1s forwards;
+}
+@keyframes comeGIm{
+  0%{
+      display: none;
+  }
+  100%{
+      display: block;
+  }
+}
+.rota img{
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  left: 50%;
+  /* transform:  scale(0); */
+ /* 旋转动画 */
+  animation:comeImg 1s ease 1, rotate 5s linear infinite;
+}
+.rota span{
+  opacity: 0;
+  position: absolute;
+  font-family: '微软雅黑';
+  animation: comeCir 2s ease  forwards;
+}
+.rota span:nth-of-type(1){
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0.5rem);
+}
+.rota span:nth-of-type(2){
+  top: 60%;right:-2rem ;
+}
+.rota span:nth-of-type(3){
+  top: 60%;left: -2rem;
+}
+/* 动画 */
+/* 线条描绘动画 */
+.rota .st0{
+  stroke-dasharray: 0,1000;
+  animation: comeLine 1.5s forwards;
+  animation-delay: 1s;
+}
+
+/* 圆点出现 */
+circle{
+   opacity: 0;
+  animation: comeCir 2s ease  forwards;
+}
+@keyframes comeImg{
+  0%{
+      width: 0;
+      /* height: 0; */
+  }
+  100%{
+    width: 20%;
+  }
+}
+@keyframes rotate{
+  0%{
+      transform: translate(-50%,-50%) rotate(0);
+  }
+  100%{
+      transform:  translate(-50%,-50%) rotate(360deg);
+  }
+}
+@keyframes comeLine{
+  0%{
+      stroke-dasharray: 0,1500;
+  }
+  100%{
+      stroke-dasharray: 800,1500;
+  }
+}
+@keyframes comeCir{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
+}
+/* logo */
+.logo{
+ position: absolute;
+ width: 15%;
+ top: 5%;left: 95%;transform: translate(-95%,-5%); 
+ overflow: hidden;
+}
+
+.logo img{
+  transform: translateX(-100%);
+  animation: comeLoIm 2s 10s forwards;
+}
+@keyframes comeLoIm{
+  0%{
+      transform: translateX(-100%);
+  }
+  100%{
+      transform: translateX(0);
+  }
+}
+
+/* 流星 */
+.meteor{
+  position: absolute;
+  width: 50%;
+  top: 0;
+}
+.meteor img:nth-of-type(2){
+  position: absolute;
+  top: 35%;left: 60%;
+  transform: translate(-50%,-50%);
+  
+}
+
+
+.meteor span{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.8rem;
+  font-weight: 1000;
+}
+/* 飞机、方框 */
+.plane{
+  width: 100%;
+  height: 56%;
+  position: absolute;
+  top: 47%;
+}
+.plane img:nth-child(1){
+  position: absolute;
+  left: -8%;
+  top: -8%;
+  width: 19%;
+  z-index: 10;
+  offset-path: path('M0.17,261.48c40.3-14.79,153.79-61.8,173-152c1.91-8.97,11.31-53.12-8-66c-20.46-13.65-71.3,9.02-76,42c-3.72,26.08,23.04,47.28,29,52c37.46,29.68,88,18.55,102.16,14.78c0.57-0.15,1.54-0.41,2.84-0.78c81.76-23.53,137.07-113.29,141-121c0.43-0.85,2.2-4.55,6-8c2.98-2.71,6.03-4.2,8-5');
+  animation: run 10s ease-in-out forwards;
+}
+.plane img:nth-child(2)
+{
+  position: absolute;
+  left: 5%;
+  top: -5.5%;
+  width: 20%;
+  z-index: 10;
+  animation: go 12s ease 4s infinite;
+
+}
+/* 小车运动 */
+@keyframes go{
+  0%{
+      left: -6%;
+      top: -3.5%;
+      transform: rotateZ(271deg);
+  }
+  19%{
+    left: -6%;
+    top: 67%;
+    transform: rotateZ(271deg);
+  }
+  20%{
+      
+      transform: rotateZ(183deg);
+  }
+  49%{
+      left: 86%;
+      top: 71%;
+      transform: rotateZ(183deg);
+  }
+  50%{
+      transform: rotateZ(91deg);
+  }
+  74%{
+      left: 85%;
+      top: -5%;
+      transform: rotateZ(91deg);
+  }
+  75%{
+      transform: rotateZ(0deg);
+  }
+  100%{
+      left: 5%;
+      top: -6%;
+  }
+}
+/* 飞机运动 */
+@keyframes run{
+  0%{
+      offset-distance: 0%;
+      transform: scale(0);
+  }
+  60%{
+      transform: scale(1);
+  }
+  100%{
+      offset-distance: 100%;
+  }
+}
+.plane .container{
+  width: 85%;
+  background:rgb(127, 140, 141,0.5);
+  height: 70%;
+  position: absolute;
+  opacity: 0;
+  margin: 7.5%;
+  box-sizing: border-box;
+  padding: 6.5%;
+  border-radius: 10px;
+  animation: comeCir 1.5s ease 1.5s forwards;
+}
+
+.container p{
+  line-height: 3.2rem;
+  text-indent: 2em;
+}
+.container .index{
+  display: block;
+
+}
+.container .back{
+  display: none;
+}
+

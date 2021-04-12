@@ -1,0 +1,103 @@
+.main_menu {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  z-index: 0;
+  right: 1rem;
+  bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  transition: background-color 1s,width 0.5s,height 0.5s;
+}
+.main_menu_anim{
+  width: 12rem;
+  height: 12rem;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+
+/* 
+
+按钮的样式
+
+*/
+
+.button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  margin: auto;
+  display: flex;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  transition: all 0.25s;
+}
+
+.button_att {
+  width: 75%;
+  height: 1.5px;
+  background-color: white;
+}
+
+.button_att:nth-child(2) {
+  position: absolute;
+  transform: rotate(90deg)
+}
+
+/* 
+
+菜单选项的动画样式
+
+*/
+.menu {
+  position: absolute;
+  z-index: 1;
+  text-decoration: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: all 0.75s;
+  transform: scale(1);
+  background-size: 2.5rem 2.5rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.menu:nth-child(1) {
+  background-image: url(../../images/nav/index.png);
+  left: 4.5rem;
+  top: 0rem;
+}
+
+.menu:nth-child(2) {
+  background-image: url(../../images/nav/person.png);
+  left: 0;
+  top: 4.5rem;
+}
+
+.menu:nth-child(3) {
+  background-image: url(../../images/nav/contact.png);
+  left:9rem;
+  top: 4.5rem;
+}
+
+.menu:nth-child(4) {
+  background-image: url(../../images/nav/introduction.png);
+  top:9rem;
+  left: 4.5rem;
+  background-size: 2rem 2rem;
+}
+
+
+.main_menu>.anmi {
+  transform: scale(0);
+  left: 4.5rem;
+  top: 4.5rem;
+}

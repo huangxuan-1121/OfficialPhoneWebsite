@@ -1,0 +1,320 @@
+/* 小图标字体引入 */
+@font-face {
+  font-family: 'icomoon';
+  src: url('../../fonts/icomoon.eot?7kkyc2');
+  src: url('../../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.logo {
+  display: block;
+  height: 20vw;
+  background-image: url(../../images/home/index/logo.png);
+  background-size: 15vw;
+  background-repeat: no-repeat;
+  background-position: right 2.5vw top 2.5vw;
+}
+
+#bigbox {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../images/home/connect/connect.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  perspective: 1000px;
+  backface-visibility: hidden;
+}
+
+#bigbox .logo img {
+  width: 15vw;
+}
+
+h1 {
+  font-family: BOOMBOX;
+  margin-left: 0.5rem;
+}
+
+/* 标题小点 */
+#bigbox h1 span {
+  display: inline-block;
+  border-radius: 50%;
+  animation: pop 1.5s cubic-bezier(.74, .06, .4, .92) infinite;
+  animation-delay: .5s;
+  margin-left: 5px;
+  margin-top: -10px;
+}
+
+.content {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.411);
+  border-radius: 10px;
+  box-shadow:
+    -10px 0px 1px rgba(255, 255, 255, 0.295),
+    0px 10px 1px rgba(255, 255, 255, 0.295),
+    10px 0px 1px rgba(255, 255, 255, 0.295),
+    0px -10px 1px rgba(255, 255, 255, 0.295);
+}
+
+/* 图标i 文字p 的样式 */
+#bigbox .content i {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.5rem;
+  font-family: icomoon;
+  display: block;
+  margin: 0 auto;
+
+}
+
+#bigbox .content p {
+  padding-bottom: 2%;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  /* font-size: 1.7rem; */
+  display: block;
+  text-align: center;
+}
+
+#bigbox .content-1 span {
+  font-size: 3rem;
+  /* float: right; */
+  position: absolute;
+  right: 0;
+  font-family: icomoon;
+  cursor: pointer;
+  color: rgb(241, 238, 238);
+
+}
+
+/* 联系内容盒子 */
+#bigbox .content-1 {
+  display: grid;
+  justify-content: center;
+  align-content: space-around;
+  width: 100%;
+  height: 100vw;
+  overflow: hidden;
+  transition: all 3s;
+  animation: flip .4s linear, flip_out .4s .41s linear;
+}
+
+#bigbox .content-1 div {
+  width: 100%;
+  /* padding: 5vw; */
+}
+
+/* 联系页面ending */
+
+/* Join Us 内容盒子 */
+#bigbox .content .content-2 {
+  display: none;
+  height: 100vw;
+  animation: flip .4s linear, flip_out .4s .41s linear;
+
+}
+
+#bigbox .content .content-3 {
+  display: none;
+  height: 100vw;
+  animation: flip .4s linear, flip_out .4s .41s linear;
+
+}
+
+#bigbox .content-2 span {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-family: icomoon;
+  cursor: pointer;
+  color: rgb(241, 238, 238);
+
+}
+
+#bigbox .content-3 span {
+  font-size: 3rem;
+  position: absolute;
+  top: 45%;
+  font-family: icomoon;
+  cursor: pointer;
+  color: rgb(241, 238, 238);
+}
+
+#bigbox .content #right_2 {
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(0, -50%);
+  font-family: icomoon;
+  cursor: pointer;
+  color: rgb(241, 238, 238);
+}
+
+form {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.content [class^="content"] {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+.login-form-2 {
+  text-align: center;
+}
+
+.login-form-1 {
+  text-align: center;
+}
+
+.content-3 h1,
+.content-2 h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+.login-form-1 .txtb {
+  margin: 10% 0;
+  padding: 10px;
+
+}
+
+
+.txtb {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 3rem;
+  background: #ffffff28;
+  border: 1px solid white;
+  padding: 6px 20px;
+  outline: none;
+  margin: 5% 0;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.login-btn {
+  width: 100%;
+  height: 3rem;
+  background: #2c3e50;
+  border: 0;
+  color: white;
+  padding: 10px;
+  margin-top: 3%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#bigbox .content form p {
+  font-size: .8rem;
+  color: #695e06;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 文字动画 start */
+
+@keyframes pop {
+  0% {
+    width: 0px;
+    height: 0px;
+    background: #e9d856;
+    border: 0px solid #ddd;
+    opacity: 0;
+  }
+
+  50% {
+    width: 20px;
+    height: 20px;
+    background: #e9d856;
+    opacity: 1;
+    bottom: 45px;
+  }
+
+  65% {
+    width: 15px;
+    height: 15px;
+    bottom: 0px;
+  }
+
+  80% {
+    width: 20px;
+    height: 20px;
+    bottom: 20px
+  }
+
+  100% {
+    width: 7px;
+    height: 7px;
+    background: beige;
+    border: 0px solid #222;
+    bottom: 13px;
+
+  }
+}
+
+/* 翻转动画 start */
+@keyframes flip {
+  0% {
+    transform: perspective(2000px) rotateY(0deg)
+  }
+
+  100% {
+    transform: perspective(2000px) rotateY(90deg)
+  }
+}
+
+@keyframes flip_out {
+  0% {
+    transform: perspective(2000px) rotateY(-90deg)
+  }
+
+  100% {
+    transform: perspective(2000px) rotateY(0deg)
+  }
+}
+
+/* 翻转动画 ending */
+@media(min-width:1024px) {
+  .login-form-1 {
+    margin-top: 31%;
+  }
+
+  .login-form-2 {
+    margin-top: 25%;
+  }
+
+  .login-form-2 .txtb {
+    margin: 4% 0;
+  }
+}

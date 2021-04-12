@@ -1,0 +1,105 @@
+.logo{
+  display: block;
+  height: 20vw;
+  background-image: url(../../images/home/index/logo.png);
+  background-size: 15vw;
+  background-repeat: no-repeat;
+  background-position: right 2.5vw top 2.5vw;
+}
+
+#award{
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box; 
+  display: -ms-flexbox; 
+  display: -webkit-flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../images/Home/award/award.jpg);
+  background-size: cover;
+  overflow: hidden;
+}
+h1{
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: MONTSERRAT-REGULAR;
+}
+h1::after{
+  content: "";
+  display: block;
+  width: 25%;
+  height: 2px;
+  margin: 1rem auto;
+  background-color: white;
+}
+.container{
+  position: relative;
+  width: 60%;
+  margin: 5vh auto;
+  padding-top: 23.4rem;
+}
+
+.container>div{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  transform-origin: 50% 100%;
+  transition: all 0.5s;
+  background-color:white;
+  color: black;
+}
+
+.img-bac{
+  width: 100%;
+  height: 20vh;
+  background-size: cover;
+}
+.card1 .img-bac{
+  background-image: url(../../../assets/images/Home/award/competition.jpg);
+}
+.card2 .img-bac{
+  background-image: url(../../../assets/images/Home/award/project.jpg);
+}
+.card3 .img-bac{
+  background-image: url(../../../assets/images/Home/award/work.jpg);
+}
+h3{
+  padding-left: 1rem;
+}
+hr{
+  width: 90%;
+}
+.container p{
+  min-height: 6rem;
+  padding: 0 1rem 0 1rem;
+  text-align: left;
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+p{
+  padding:  2rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* 
+card
+*/
+.container .card1{
+  transform: rotate(-15deg);
+}
+.container .card2{
+  transform: rotate(0deg);
+}
+.container .card3{
+  transform: rotate(15deg);
+}
+
+
+.container .card-anmi{
+  transform-origin: 50% 50%;
+  opacity: 0;
+}

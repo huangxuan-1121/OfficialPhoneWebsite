@@ -1,0 +1,34 @@
+#stage-box{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+[class$="page"]{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:100%;
+  height:100%;
+  transition:all 0.5s ease-in-out;
+  backface-visibility:hidden;
+}
+
+.indexpage{
+  transform: rotateY(0deg) translateZ(50vw);
+}
+
+.secondpage{
+  transform: rotateY(90deg)  translateZ(50vw);
+}
+
+.thirdpage{
+  transform: rotateY(180deg)  translateZ(50vw);
+}
+
+.fourthpage{
+  transform: rotateY(270deg)  translateZ(50vw);
+}
